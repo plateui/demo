@@ -1,0 +1,105 @@
+{
+  "name": "Users",
+  "views": [
+    {
+      "name": "Overview",
+      "views": [
+        {
+          "component": "count",
+          "data": {
+            "label": "Total",
+            "value": 2314,
+            "color": "yellow"
+          }
+        },
+        {
+          "component": "count",
+          "data": {
+            "label": "Active",
+            "value": 2201,
+            "color": "green",
+            "summary": "98%"
+          }
+        },
+        {
+          "component": "count",
+          "data": {
+            "label": "Spammer",
+            "value": 123,
+            "color": "red",
+            "summary": "2%"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "component": "table-data",
+      "data": {
+        "columns": [
+          {
+            "name": "ID",
+            "type": "number",
+            "primary": true,
+            "config": {
+              "route": {
+                "name": "UserView"
+              },
+              "sortable": true
+            },
+            "key": "id"
+          },
+          {
+            "name": "Avatar",
+            "type": "image",
+            "config": {
+              "style": {
+                "width": "42px",
+                "height": "42px",
+                "border-radius": "50%"
+              },
+              "route": {
+                "name": "UserView"
+              }
+            },
+            "key": "avatar_url"
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "key": "name"
+          },
+          {
+            "name": "Email",
+            "type": "string",
+            "key": "email"
+          },
+          {
+            "name": "Website",
+            "type": "link",
+            "key": "website"
+          },
+          {
+            "name": "Tags",
+            "type": "tag",
+            "key": "tags"
+          },
+          {
+            "name": "Active",
+            "type": "boolean",
+            "key": "active",
+            "config": {
+              "filters": ["y", "n"]
+            }
+          },
+          {
+            "name": "Register At",
+            "type": "datetime",
+            "key": "created_at"
+          }
+        ],
+        "endpoint": "/demo/data/users-list.json"
+      }
+    }
+  ]
+}
