@@ -1,0 +1,13 @@
+{
+  "name": "Components",
+  "views": [{
+    "name": "Colors",
+    "summary": "Our built-in colors in Plate UI.",
+    "component": "content",
+    "data": {
+      "type": "text/html",
+      "box": true,
+      "endpoint": "/demo/data/colors.html"
+    }
+  }]
+}
